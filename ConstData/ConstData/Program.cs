@@ -8,8 +8,13 @@ namespace ConstData
 {
     class MyMathClass
     {
-        public const double PI = 3.14;
- 
+        //public const double PI = 3.14;
+        public static readonly double PI;
+        static MyMathClass()
+        {
+            PI = 3.14;
+        }
+       
     }
     class Program
     {
@@ -17,7 +22,7 @@ namespace ConstData
         {
             Console.WriteLine("***** fun with Const *****\n");
             Console.WriteLine("The value of PI is: {0}", MyMathClass.PI);
-         
+             
 
             Console.ReadLine();
         }
